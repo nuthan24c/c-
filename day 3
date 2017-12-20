@@ -1,0 +1,19 @@
+Write a C program to convert from Uppercase to Lowercase and Lowercase to Uppercase.
+
+#include<stdio.h>
+void main()
+{
+    char ch;
+    printf("enter any character :\n");
+    scanf("%c",&ch);
+    if(ch >=97 && ch <= 122)
+    {
+        ch = ch-32;
+        printf("Converted to : %c",ch);
+    }
+    else
+    {
+        ch = ch + 32;
+        printf("Converted to : %c",ch);
+    }
+}
