@@ -151,14 +151,45 @@ void main()
      int cname[10];
     int cid;
     float units;
-    float bill;
+    float bill,exbill,t;
     printf("---------- Customer Details----------- \n ");
+   
+    
     
    scanf("%d %s %f",&cid,&cname,&units);
   
     
-    printf("customer name %s \n customer id %d \n customer consumed units %f",cname,cid,units);
+    printf("customer name : %s  \n customer id : %d  \n customer consumed units : %f ",cname,cid,units);
+    if(units<=199)
+    {
+    bill = units*1.20;
+    printf("\nAmount Charges @Rs. 1.20 per unit : %f ", bill);
+    }
+    else if(units>=200 && units<400)
+    {
+        bill = units* 1.50;
+        printf("\nAmount Charges @Rs. 1.50 per unit : %f ", bill);
     
+    }
+     else if(units>=400 && units<600)
+    {
+        bill = units* 1.80;
+        printf("\nAmount Charges @Rs. 1.80 per unit : %f ", bill);
+    
+    }
+    else
+    {
+        bill = units*2.00;
+        printf("\nAmount Charges @Rs. 2.00 per unit: %f ", bill);
+    }
+    if(bill>400)
+    {
+        exbill = 0.15*bill;
+        printf("\nSub Charge  : %f", exbill);
+        
+        t=exbill+bill;
+        printf("\nNet Amount to be paid : %f", t);
+    }
 }
 
 
