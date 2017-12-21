@@ -82,3 +82,26 @@ int main()
     printf("\nValue of c = %d  d=%d ",c,abc);
     return 0;
 }
+
+
+main>>abc>>bbc
+
+#include<stdio.h>
+char *abc();
+char *bbc();
+void main()
+{
+    printf("This is main function");
+    printf("\nEntered String in abc() is : %s",abc());
+}
+char* abc()
+{
+    printf("\nThis is abc() function");
+    printf("\nEntered String in bbc() is : %s",bbc());
+    return "Nuthan";
+}
+char *bbc()
+{
+    printf("\nThis is bbc() function");
+    return "hii";
+}
