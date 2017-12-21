@@ -50,3 +50,21 @@ int main()
     printf("Sum is %d",num);
 }
 
+
+Write a C program for Local and Global Variables.
+
+#include<stdio.h>
+int x,y;
+int sum()
+{
+    return x+y;
+}
+int main()
+{
+    x=5;
+    y=5;
+    int sol;
+    sol = sum();
+    printf("Addition is : %d ", sol);
+}
+
