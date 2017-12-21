@@ -37,3 +37,16 @@ int main()
 }
 
 
+#include<stdio.h>
+int inc(int *a)
+{
+    *a=*a+1;
+}
+int main()
+{
+    int num = 10;
+   
+  inc(&num);
+    printf("Sum is %d",num);
+}
+
