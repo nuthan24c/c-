@@ -105,3 +105,62 @@ char *bbc()
     printf("\nThis is bbc() function");
     return "hii";
 }
+
+
+Write a C program for 3D matrices Addition.
+
+#include<stdio.h>
+ 
+int main()
+{
+    int arr1[3][3][3], arr2[3][3][3], arr3[3][3][3];
+    int i, j, k;
+    printf("Enter First 3*3 Matrix Elements:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+	   for(k = 0; k <3; k++)
+	   {		
+            scanf("%d", &arr1[i][j][k]);
+	   }
+        }
+    }
+    printf("\nEnter Second 3*3 Matrix Elements:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+	 
+            for(k = 0; k <3; k++)
+	   {		
+            scanf("%d", &arr2[i][j][k]);
+	   }
+        }
+    }
+    printf("\nAddition of Matrices:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+                   for(k = 0; k <3; k++)
+	   {		
+           	arr3[i][j][k] = arr1[i][j][k] + arr2[i][j][k];
+	   }
+        }
+    }
+    printf("\nThird Matrix Elements:\n");
+    for(i = 0; i < 3; i++)
+    {
+        for(j = 0; j < 3; j++)
+        {
+		for(k = 0; k <3; k++)
+		{
+                   printf("%d\t", arr3[i][j][k]);
+		}
+        }
+        printf("\n");
+    }
+    printf("\n");
+    return 0;   
+}
