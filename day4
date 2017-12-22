@@ -1,0 +1,94 @@
+int main(){  
+int number=50;        
+int *p;//pointer to int      
+p=&number;//stores the address of number variable        
+printf("Address of p variable is %u \n",p);        
+p=p+3;   //adding 3 to pointer variable    
+printf("After adding 3: Address of p variable is %u \n",p);       
+return 0;  
+}   
+
+
+#include <stdio.h>
+#include <string.h>
+ 
+struct Books {
+   char  title[50];
+   char  author[50];
+   char  subject[100];
+   int   book_id;
+};
+ 
+int main( ) {
+
+   struct Books Book1;        
+   struct Books Book2;        
+ 
+
+   strcpy( Book1.title, "C Programming");
+   strcpy( Book1.author, "Nuha Ali"); 
+   strcpy( Book1.subject, "C Programming Tutorial");
+   Book1.book_id = 6495407;
+
+   
+   strcpy( Book2.title, "Telecom Billing");
+   strcpy( Book2.author, "Zara Ali");
+   strcpy( Book2.subject, "Telecom Billing Tutorial");
+   Book2.book_id = 6495700;
+ 
+   printf( "Book 1 title : %s\n", Book1.title);
+   printf( "Book 1 author : %s\n", Book1.author);
+   printf( "Book 1 subject : %s\n", Book1.subject);
+   printf( "Book 1 book_id : %d\n", Book1.book_id);
+
+   printf( "Book 2 title : %s\n", Book2.title);
+   printf( "Book 2 author : %s\n", Book2.author);
+   printf( "Book 2 subject : %s\n", Book2.subject);
+   printf( "Book 2 book_id : %d\n", Book2.book_id);
+
+   return 0;
+}
+
+
+
+#include<stdio.h>  
+int main(){  
+int number=50;      
+int *p;//pointer to int    
+int **p2;//pointer to pointer        
+p=&number;//stores the address of number variable      
+p2=&p;    
+printf("Address of number variable is %x \n",&number);      
+printf("Address of p variable is %x \n",p);      
+printf("Value of *p variable is %d \n",*p);      
+printf("Address of p2 variable is %x \n",p2);      
+printf("Value of **p2 variable is %d \n",*p);      
+return 0;  
+}   
+    
+	
+#include <stdio.h>
+enum day {sunday = 1, monday, tuesday = 5,
+          wednesday, thursday = 10, friday, saturday};
+ 
+int main()
+{
+    printf("%d %d %d %d %d %d %d", sunday, monday, tuesday,
+            wednesday, thursday, friday, saturday);
+    return 0;
+}
+
+
+
+#include <stdio.h>
+enum State {WORKING = 0, FAILED, FREEZED};
+enum State currState = 2;
+ 
+enum State FindState() {
+    return currState;
+}
+ 
+int main() {
+   (FindState() == WORKING)? printf("WORKING"): printf("NOT WORKING");
+   return 0;
+}
